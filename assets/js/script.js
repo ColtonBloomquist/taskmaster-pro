@@ -133,6 +133,12 @@ $("#modalDueDate").datepicker({
   minDate: 1,
 });
 
+setInterval(function () {
+  $(".card .list-group-item").each(function (index, el) {
+    auditTask(el);
+  });
+}, 1800000);
+
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function () {
   // clear values
